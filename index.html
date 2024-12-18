@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button class="back-button">←</button>
+            <h1>Check-in Ticket</h1>
+        </header>
+
+        <div class="ticket-container">
+            <div class="avatar">
+                <span>LB</span>
+            </div>
+            <div class="ticket">
+                <div class="ticket-row">
+                    <div class="ticket-column">
+                        <span class="label">Mitglied</span>
+                        <span class="value">Leon Bubova</span>
+                    </div>
+                    <div class="ticket-column">
+                        <span class="label">Status</span>
+                        <span class="status">CHECKED-IN</span>
+                    </div>
+                </div>
+
+                <div class="ticket-row time-row">
+                    <div class="ticket-column">
+                        <span class="label">Datum</span>
+                        <span class="value" id="current-date"></span>
+                    </div>
+                    <div class="ticket-column">
+                        <span class="label">Zeit</span>
+                        <span class="value" id="current-time"></span>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="studio-info">
+                    <span class="label">Studio</span>
+                    <span class="value">Element Boulders Köln</span>
+                    <span class="address">Schildergasse 70, 50667 Köln</span>
+                </div>
+            </div>
+            <div class="ticket-notch"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("current-date").innerHTML = new Date().toLocaleDateString('de-DE');
+        document.getElementById("current-time").innerHTML = new Date().toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', hour12: false });
+    </script>
+</body>
+</html> 
